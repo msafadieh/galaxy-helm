@@ -16,3 +16,4 @@ jobs:
           chart-token: ${{ secrets.CHARTS_TOKEN }}
           github-labels: ${{ join(github.event.pull_request.labels.*.name, ', ') }}
           git-branch: ${{ github.event.pull_request.base.ref }}
+          packaging-command: 'sh scripts/helm_package "${CHARTS_DIR}/charts"'
